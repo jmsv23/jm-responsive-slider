@@ -120,10 +120,6 @@
                         contenedor.css('margin-left', 0);
                         avance = 0;
                     }
-                    console.log('size: ' + size);
-                    console.log('pos: ' + pos);
-                    console.log('num: ' + num);
-                    console.log('avance: ' + avance);
                 } 
                 //control si ancho cambia
                 widthState = $( window ).width();
