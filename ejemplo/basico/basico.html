@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo basico de uso</title>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
+		<meta charset="utf-8">
+    	<meta name="description" content="Ejemplo basico de uso">
+		<link href="basico.css" rel="stylesheet" type="text/css" />
+		<!--Incluimos la hoja de estilos necesitada por el plugin-->
+		<link href="../../src/jm-responsive-slider.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<hgroup>
+			<h1>jm-responsive-slider</h1>
+			<h2>jQuery plugin</h2>
+		</hgroup>
+		<section id="contenedor">
+			<div class="slidecontent">
+				<article class="slide">
+					<img src="img/1.jpg" />
+				</article>
+				<article class="slide">
+					<img src="img/3.jpg" />
+				</article>
+				<article class="slide">
+					<img src="img/2.jpg" />
+				</article>
+			</div>
+		</section>
+		<footer>
+			<ul>
+				<li><span>Autor:</span> Ing. Jose Manuel Santibañez Villanueva</li>
+				<li><span>E-mail:</span> jmsv23@gmail.com</li>
+				<li><span>Github:</span> <a href="https://github.com/jmsv23">https://github.com/jmsv23</a></li>
+				<li><span>Licencia:</span> MIT</li>
+			</ul>
+		</footer>
+		<!--insertar los scripts antes del cierre de la etiqueta body es una buena practica al usar javascript y es bueno para el performance al cargar la pagina ya que carga todo el contenido antes de intentar cargar los escript-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="../../src/jm-responsive-slider-plugin.min.js" type="text/javascript" language="javascript"></script>
+		<script src="basico.js" type="text/javascript" language="javascript"></script>
+	</body>
+</html>

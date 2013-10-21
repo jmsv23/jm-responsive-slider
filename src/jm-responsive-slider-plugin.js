@@ -20,8 +20,11 @@
             var avance = 0;
             var widthState = $( window ).width();
             var lock = false;
-            container.css('position', 'relative');
+            //container.css('position', 'relative');
+            container.css({'position': 'relative', 'overflow': 'hidden'});
+            contenedor.addClass('clearfix');
             contenedor.width(size * n);
+            slide.css('display', 'block');
 
             //function de control de breakpoint
             function checkBreakpoint( bp, tam ) {
