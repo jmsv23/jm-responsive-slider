@@ -2,6 +2,8 @@ body {
   margin: auto;
   max-width: 1280px;
   min-width: 350px;
+  background: #f7f7f7;
+  color: #333;
 }
 
 .slide img {

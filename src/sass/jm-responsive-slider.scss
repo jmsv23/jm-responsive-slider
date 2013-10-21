@@ -7,7 +7,8 @@
 		width: 7em;
 		height: 7em;
 		z-index: 1000;
-		top: 18%;
+		top: 50%;
+		margin-top: -3.5em;
 		cursor: hand;
 		cursor: pointer;
 		&.izq {
@@ -26,6 +27,7 @@
 	}
 	.slide{
 		float:left;
+		display: none;
 	}
 
 	.clearfix:after {
