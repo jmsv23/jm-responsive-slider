@@ -1,3 +1,10 @@
+/**
+* Autor: Jose Manuel Santibañez Villanueva
+* E-mail: jmsv23@gmail.com
+* Github: https://github.com/jmsv23
+* Licencia: GNU GPL V3
+**/
+
 (function($) {
     $.fn.jmResponsiveSlider = function(options) {
 
@@ -20,8 +27,12 @@
             var avance = 0;
             var widthState = $( window ).width();
             var lock = false;
-            container.css('position', 'relative');
+            var pos = 0;
+            //container.css('position', 'relative');
+            container.css({'position': 'relative', 'overflow': 'hidden'});
+            contenedor.addClass('clearfix');
             contenedor.width(size * n);
+            slide.css('display', 'block');
 
             //function de control de breakpoint
             function checkBreakpoint( bp, tam ) {
@@ -70,6 +81,7 @@
                                 settings.onmove.call( this );
                             }
                             avance += size;
+                            pos--;
                             contenedor.animate({'margin-left': avance}, settings.tiempo, function() { lock = false});
                         }
                     }
@@ -82,6 +94,7 @@
                                 settings.onmove.call( this );
                             }
                             avance -= size;
+                            pos++;
                             contenedor.animate({'margin-left': avance}, settings.tiempo, function() { lock = false});
                         }
                     }
@@ -92,14 +105,21 @@
             $( window ).resize(function() {
             	if ( widthState !== $( window ).width() ) {
                     size = container.outerWidth(false);
-                    contenedor.css('margin-left', 0);
-                    avance = 0;
 
                     //asignando numero de elementos por slides dependiendo de los break point's
                     var num = checkBreakpoint( settings.breakpoint, size );
                     // ancho del contenedor de slides
                     contenedor.width(size * (Math.ceil(n / num)));
                     slide.width(size / num);
+                    //ajuste de desplazamiento
+                    console.log('avance1: ' + avance);
+                    if ( pos > 0) {
+                        avance = -(Math.floor(pos / num) * size);
+                        contenedor.css('margin-left', avance );
+                    } else {
+                        contenedor.css('margin-left', 0);
+                        avance = 0;
+                    }
                 } 
                 //control si ancho cambia
                 widthState = $( window ).width();
