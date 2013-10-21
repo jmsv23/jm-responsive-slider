@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'calypso_e_heitalic';
+  src: url("fuentes/calypsoe/calypsoe-heavyitalic-webfont.eot");
+  src: url("fuentes/calypsoe/calypsoe-heavyitalic-webfont.eot?#iefix") format("embedded-opentype"), url("fuentes/calypsoe/calypsoe-heavyitalic-webfont.woff") format("woff"), url("fuentes/calypsoe/calypsoe-heavyitalic-webfont.ttf") format("truetype"), url("fuentes/calypsoe/calypsoe-heavyitalic-webfont.svg#calypso_e_heitalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.n-controls {
+  display: block;
+  position: absolute;
+  width: 7em;
+  height: 7em;
+  z-index: 1000;
+  top: 18%;
+  cursor: hand;
+  cursor: pointer;
+}
+.n-controls.izq {
+  border-style: solid;
+  border-color: white;
+  border-top-width: 3px;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 3px;
+  transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-45deg);
+  /* Safari and Chrome */
+  left: 4%;
+}
+.n-controls.der {
+  border-style: solid;
+  border-color: white;
+  border-top-width: 0;
+  border-right-width: 3px;
+  border-bottom-width: 3px;
+  border-left-width: 0;
+  transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-45deg);
+  /* Safari and Chrome */
+  right: 4%;
+}
+
+.slide {
+  float: left;
+}

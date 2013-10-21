@@ -1,0 +1,14 @@
+@mixin rotate($grados) {
+	transform:rotate($grados);
+	-ms-transform:rotate($grados); /* IE 9 */
+	-webkit-transform:rotate($grados); /* Safari and Chrome */
+}
+
+@mixin border($style, $color, $top, $right, $bottom, $left) {
+	border-style: $style;
+	border-color: $color;
+	border-top-width: $top;
+	border-right-width: $right;
+	border-bottom-width: $bottom;
+	border-left-width: $left;
+}

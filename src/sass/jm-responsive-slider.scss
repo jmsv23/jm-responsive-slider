@@ -1,0 +1,26 @@
+@import '_variables';
+@import '_mixins';
+//controles
+	.n-controls{
+		display: block;
+		position: absolute;
+		width: 7em;
+		height: 7em;
+		z-index: 1000;
+		top: 18%;
+		cursor: hand;
+		cursor: pointer;
+		&.izq {
+			@include border(solid, $paleta1, 3px, 0, 0, 3px);
+			@include rotate(-45deg);
+			left: 4%;
+		}
+		&.der{
+			@include border(solid, $paleta1, 0, 3px, 3px, 0);
+			@include rotate(-45deg);
+			right: 4%;
+		}
+	}
+	.slide{
+		float:left;
+	}
