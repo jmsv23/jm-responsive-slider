@@ -70,7 +70,7 @@
        		izq.insertAfter(contenedor);
        		der.insertAfter(contenedor);
             
-            $('.n-controls').on(settings.evento, function () {
+            $(this).children('.n-controls').on(settings.evento, function () {
                 if(!lock) {
                     var total = contenedor.width();
                     if ( $(this).hasClass('izq') ) {

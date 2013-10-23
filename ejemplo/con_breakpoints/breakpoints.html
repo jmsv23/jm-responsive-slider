@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
 		<meta charset="utf-8">
     	<meta name="description" content="Ejemplo basico de uso">
-		<link href="basico.css" rel="stylesheet" type="text/css" />
+		<link href="breakpoints.css" rel="stylesheet" type="text/css" />
 		<!--Incluimos la hoja de estilos necesitada por el plugin-->
 		<link href="../../src/jm-responsive-slider.css" rel="stylesheet" type="text/css" />
 	</head>
@@ -28,8 +28,28 @@
 				<article class="slide">
 					<img src="img/4.jpg" />
 				</article>
+				<article class="slide">
+					<img src="img/2.jpg" />
+				</article>
+				<article class="slide">
+					<img src="img/1.jpg" />
+				</article>
 			</div>
 		</section>
+		<div>
+			<p>El plugin acepta variables de configuracion que son pasadas a la funcion en un objeto jsonuna de ellas es la variable breakpoint que sirve para definir hasta 2 breakpoint y el numero de elementos que se mostraran por slide dependiendo de ese breakpoint
+</p>
+		<pre class="language-javascript">
+//Implementacion
+$(document).on('ready', function () {
+	$('#contenedor').jmResponsiveSlider({
+		breakpoint        : [{bp : 800, slides : 2}, {bp : 1000, slides : 3}]
+	});
+});
+
+			</pre>
+			<p>Como podemos ver arriba se le pasa un objeto con la variable breakpoint que es un array de objetos con el formato bp (valor del breakpoin en pixeles) y slides (numero de elementos por slide), con lo que modificaremos la forma en la que se presentan nuestros slides dependiendo del ancho de la pantalla</p>
+		</div>
 		<footer>
 			<ul>
 				<li><span>Autor:</span> Ing. Jose Manuel Santibañez Villanueva</li>
@@ -41,6 +61,6 @@
 		<!--insertar los scripts antes del cierre de la etiqueta body es una buena practica al usar javascript y es bueno para el performance al cargar la pagina ya que carga todo el contenido antes de intentar cargar los escript-->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="../../src/jm-responsive-slider-plugin.min.js" type="text/javascript" language="javascript"></script>
-		<script src="basico.js" type="text/javascript" language="javascript"></script>
+		<script src="breakpoints.js" type="text/javascript" language="javascript"></script>
 	</body>
 </html>
