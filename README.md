@@ -1,10 +1,10 @@
 jm-responsive-slider
 ====================
 
-Autor: Jose Manuel Santibañez Villanueva
-E-mail: jmsv23@gmail.com
-Github: https://github.com/jmsv23
-Licencia: GNU GPL V3
+*Autor: Jose Manuel Santibañez Villanueva
+*E-mail: jmsv23@gmail.com
+*Github: https://github.com/jmsv23
+*Licencia: GNU GPL V3
 
 Es un plugin sencillo para generar un slider que sea resposive y se adapte al tamaño de pantalla del dispositivo.
 
